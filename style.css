@@ -1,0 +1,376 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans", sans-serif;
+    font-style: normal;
+    list-style: none;
+    text-decoration: none;
+}
+
+ :root{
+    --main-color:#ff702a;
+    --text-color:#050505;
+    --big-color: rgba(0,0,0, 0.5);
+    --big-font:5rbem;
+    --h2-font:2.25rem;
+    --p-font:0.9rem;
+
+ }
+
+body{
+  color: var(--text-color);
+  background-image: url(https://images.pexels.com/photos/60008/brown-coal-energy-garzweiler-bucket-wheel-excavators-60008.jpeg) ;
+  background-size: cover;
+    background-position: center;
+}
+header{
+  position: fixed;
+  right: 0;
+  top:  0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 9%;
+  background: var(--big-color) ;
+  }
+  li{
+    list-style: none;
+    }
+    
+    a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+    }
+    a:hover{
+      color: gold;
+    }
+
+    
+    .navbar {
+        width: 100%;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar .links{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .navbar .logo a{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .navbar .toggle_btn{
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+    }
+    .action_btn {
+      background-color: purple;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: scale .2 ease;
+      
+  }
+  
+  .action_btn:hover {
+      scale: 1.05;
+      color: white;
+  }
+  
+  .action_btn:active {
+      scale: 0.95;
+  }
+  .dropdown_menu {
+      display: none;
+      position: absolute;
+      right: 2rem;
+      top: 60px;
+      height: 0;
+      width: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .dropdown_menu.open{
+      height: 240px;
+  }
+  .dropdown_menu li{
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .dropdown_menu .action_btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+ 
+ 
+ section{
+  padding: 70px 17%;
+
+ }
+ 
+ .home{
+  width: 100%;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+  color: #050505;
+ }
+
+.home-img img{
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.home-text h1{
+  font-size: var(--big-font);
+  color: white;
+
+}
+.home-text h2{
+  margin: 1rem 0 2rem;
+  color: white ;
+}
+.btn{
+  display: inline-block;
+  padding: 10px 20px;
+  background: orangered;
+  color: black;
+  border-radius: 0.5rem;
+}
+.btn:hover{
+  transform: scale(1.2) translateY(10px);
+  transition: .4s;
+}
+
+.cta{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  padding: 70px 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  width: 66%;
+  margin: 100px auto;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.cta h2{
+  font-size: 2rem;
+  color:black;
+  margin-bottom: 30px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer{
+  padding: 10px 0;
+}
+
+.col{
+  width: 25%;
+}
+
+.col h4{
+  font-size: 1.2rem;
+  color: #050505;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.col h4::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  left: 0;
+  bottom: -8px;
+  background: #ff702a;
+}
+
+.col ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.col ul li a{
+  color: #050505;
+  font-size: 1.1rem;
+  display: block;
+  text-transform: capitalize;
+  transition: .4s;
+
+}
+.col ul li a:hover {
+  color: #fff;
+  transform: translateX(-12px);
+}
+
+.col .social a{
+  width: 40px;
+  display: 220px;
+  align-items: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.col .social a{
+  height: 40px;
+  width: 40px;
+  background: #ff702a;
+  color: #050505;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.col .social a:hover{
+  transform: scale(1.2);
+  color: #0ab518;
+  background: #050505;
+}
+
+
+@media (max-width: 1560px) {
+  header{
+    padding: 15px 40px;
+  }
+  :root {
+    --big-font:3.5rem;
+    --h2-font:2rem;
+  }
+  }
+  @media (max-width: 1140px){
+    section{
+      padding: 50px 8%x;
+    }
+    #menu-icon{
+     display: initial;
+      color: #fff;
+    
+    }
+    header .navbar{
+      position: absolute;
+      top: -320px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background: rgba(0,0,0, 0.5);
+      transition: .5s;
+    }
+    header .navbar .active{
+      top: 70px;
+    }
+    .navbar a{
+      padding: 1.5rem;
+      display: block;
+    }
+    .col{
+      width: 50%;
+      margin-bottom: 10px;
+    }
+  }
+
+@media (max-width: 720px){
+  header{
+    padding: 10px 16px;
+  }
+  .home{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about{
+    grid-template-columns: 1fr;
+    text-align: center;
+
+  }
+.about-img{
+  order: 2px;
+}
+section{
+  padding: 100px 7%;
+}
+}
+@media (max-width: 575px) {
+  .col{
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .col{
+    width: 100%;
+  }
+}
+@media (max-width: 380px){
+  header{
+    padding: 10px 20px;
+  }
+  .home{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about{
+    grid-template-columns: 1fr;
+    text-align: center;
+
+  }
+.about-img{
+  order: 2px;
+}
+section{
+  padding: 100px 7%;
+}
+}
+@media(max-width: 992px) {
+  .navbar  .links,
+  .navbar  .action_btn {
+      display: none;
+  }
+  .navbar .toggle_btn{
+      display: block;
+      color: white;
+  }
+  .dropdown_menu{
+      display: block;
+  }
+}
+@media(max-width: 576px) {
+  .dropdown_menu{
+      left: 2rem;
+      width: unset;
+  }
+}
